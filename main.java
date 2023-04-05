@@ -4,32 +4,18 @@ import javax.swing.JOptionPane;
 public class main {
     public static void main(String[] args) {    
     
-        firstStart teststart = new firstStart();
-        
+
         Scanner input = new Scanner(System.in);
+        firstStart testing = new firstStart();
 
-        boolean finished = false;
+        System.out.println("Would you like to run a test environment?");
+        String environemnt = input.nextLine();
 
-        String doublecheck = teststart.getFirstStarted();
-        System.out.println(doublecheck);
-
-        /*System.out.println("Would you like to run a test start?");
-        String testcheck = input.nextLine();
-        */
-        if (finished == false) {
-            System.out.println("Test");
-            
-            teststart.initialize();
-
-            finished = true;            
-        } 
-        else if (finished == true) {
-            System.out.println("Holy shit you wrote code that works charlie");
+        if (environemnt.equals("yes")){
+            testing.initialize();
         }
-        else {
-            System.out.println("You fucking bozo it doesn't work dumbass");
+        else{
+            System.out.println("Why not bozo");
         }
-
-        System.out.println(teststart.getFirstStarted());
     }
 }
